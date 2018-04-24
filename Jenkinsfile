@@ -30,7 +30,7 @@ pipeline {
 		stage('Upload War'){
 			steps{
 			
-				nexusArtifactUploader artifacts: [[artifactId: 'jpetstore', classifier: 'SNAPSHOT', file: 'target/jpetstore.war', type: 'war']], credentialsId: 'nexusID', groupId: 'org', nexusUrl: '192.168.77.11:8443/repository/jpetStoreRepo', nexusVersion: 'nexus3', protocol: 'https', repository: 'jpetStoreRepo', version: "${env.BUILD_NUMBER}"
+				nexusArtifactUploader artifacts: [[artifactId: 'jpetstore', classifier: 'SNAPSHOT', file: 'target/jpetstore.war', type: 'war']], credentialsId: 'nexusID', groupId: 'org', nexusUrl: '192.168.56.102:8443/repository/jpetStoreRepo', nexusVersion: 'nexus3', protocol: 'https', repository: 'jpetStoreRepo', version: "${env.BUILD_NUMBER}"
 			}
 		}
 	}
