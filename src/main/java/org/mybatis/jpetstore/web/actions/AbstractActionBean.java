@@ -45,6 +45,7 @@ public abstract class AbstractActionBean implements ActionBean, Serializable {
   @Override
   public void setContext(ActionBeanContext context) {
     this.context = context;
+    System.out.println("Hi");
   }
 
 }
